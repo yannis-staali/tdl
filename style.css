@@ -2,7 +2,17 @@ html{
     background-image: url('back.jpg');
     background-size: cover;
 }
+.form_index{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    width:fit-content;
 
+}
+.title_index {
+    text-align: center;
+}
 h3, h1, h2, p{
     font-family: 'Itim', cursive;
  

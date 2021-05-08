@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['user']))
+{
+    header("Location: index.php");
+   
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +21,9 @@
     <title>TODOLIST</title>
 </head>
 <body>
+    <form action="traitement.php" method="POST">
+        <button name="deconnexion" type="submit">Deconnexion</button>
+    </form>
     <h1>TODOLIST</h1>
 
     <h3>A faire</h3>
@@ -26,6 +39,7 @@
     <input name="add_task" type="submit"></input>
     </form>
 
+ 
     <script src="script.js"></script> 
 </body>
 </html>

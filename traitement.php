@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['new_task']))
 {
     $nom = $_POST['new_task'];
@@ -64,5 +65,11 @@ if(isset($_POST['task_done']))
     $json_response2 = json_encode($result);
 
     echo  $json_response2 ;
+}
+
+if(isset($_POST['deconnexion']))
+{
+   unset($_SESSION['user']);
+   header("Location: index.php");
 }
 ?>
